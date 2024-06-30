@@ -1,1 +1,193 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --off-white: #fafafa;
+    --red: #eb5757;
+    --green: #27ae60;
+    --theme-blue: #3b3486;
+    --dark-gray: #4f4f4f;
+    --theme-black: #282828;
+    --white-gray: #f5f5f5;
+    --gray-light: #e0e0e0;
+    --dark-off-white: #bdbdbd;
+    --off-white-light: #f0f0f0;
+    --light-gary-blue: #f8fbfd;
+    --gray-dark-light: #eeeeee;
+    --theme-blue-black: #130f26;
+    --theme-dark-blue: #231f20;
+    --light-blue: #217ff3;
+    --gray-white: #f4f4f6;
+    --gray-white-black: #4d4d4d;
+    --dark-blue: #181433;
+    --gray-blue: #8d8b9a;
+    --gray-black-light: #828282;
+    --off-white-gray-light: #f8f6f3;
+    --off-white-blue-light: #eceaff;
+    --off-white-50: rgba(241, 236, 230, 0.502);
+    --black-60: rgba(0, 0, 0, 0.6);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: var(--white-gray);
+    border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 50px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--gray-light);
+    border: 1px solid var(--dark-off-white);
+    border-radius: 50px;
+  
+    &:hover {
+      background: var(--gray-light);
+      border: 1px solid var(--dark-off-white);
+    }
+  }
+  
+  body {
+    background-color: var(--off-white) !important;
+  }
+  
+  .is-invalid {
+    .textarea-box.ng-touched,
+    .form-select.ng-touched,
+    .form-control.ng-touched::placeholder,
+    .form-control .ng-touched ::placeholder,
+    .form-control.ng-touched ::placeholder,
+    .form-control.ng-touched {
+      border-color: var(--red) !important;
+      color: var(--red) !important;
+    }
+  
+    .invalid-feedback {
+      font-size: 0.875rem;
+      font-style: normal;
+      padding-left: 5px;
+      font-weight: 400;
+      margin-top: 8px;
+      display: block;
+    }
+  }
+
+  .page-section {
+    // margin-top: 60px;
+  }
+
+  .main-card-box {
+    border: 1px solid var(--gray-dark-light);
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 24px;
+  }
+  
+  .p-datatable {
+    .p-datatable-thead > tr > th,
+    .p-datatable-tbody > tr > td {
+      border-bottom: 1px solid var(--off-white-light) !important;
+      padding: 1rem !important;
+      font-style: normal;
+      line-height: 15px;
+      font-size: 16px;
+    }
+  
+    .p-datatable-thead > tr > th {
+      background-color: var(--off-white) !important;
+      color: var(--theme-black) !important;
+      font-weight: 500;
+    }
+  
+    .p-datatable-tbody > tr > td {
+      overflow: hidden !important;
+      height: 30px !important;
+      color: var(--dark-gray);
+      font-weight: 400;
+    }
+  
+    .p-datatable-tbody > tr:hover {
+      background-color: var(--light-gary-blue) !important;
+    }
+  }
+  
+  .p-paginator {
+    padding-bottom: 0px !important;
+    margin-top: 16px;
+  }
+  
+  .p-paginator-bottom {
+    border: none !important;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+
+  .apply-btn,
+.discard-btn,
+.add-button {
+  width: 100% !important;
+  max-width: 120px !important;
+  padding: 14px 24px !important;
+  font-weight: 500 !important;
+  font-size: 16px !important;
+  border-radius: 12px !important;
+  line-height: 20px !important;
+  text-align: center !important;
+  box-shadow: none !important;
+}
+
+.add-button {
+  background: var(--theme-blue) !important;
+  color: var(--white) !important;
+  border: 1px solid var(--theme-blue) !important;
+}
+
+.discard-btn {
+  background-color: var(--gray-dark-light) !important;
+  border-color: var(--gray-dark-light) !important;
+  color: var(--dark-gray) !important;
+}
+
+.apply-btn {
+  color: var(--theme-blue) !important;
+  background: var(--white) !important;
+  border: 1px solid var(--theme-blue) !important;
+}
+
+.empty-button {
+  padding: 0px !important;
+  border: 0px !important;
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+.width-max-content {
+  width: max-content !important;
+  max-width: max-content !important;
+}
+
+
+  .heading-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--black);
+  
+    @media (max-width: 410px) {
+      font-size: 16px;
+    }
+  }
