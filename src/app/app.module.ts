@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppConfigService } from './core/services/app-config.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { appInitProvide } from './app.initializer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { appInitProvide } from './app.initializer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     provideClientHydration(),

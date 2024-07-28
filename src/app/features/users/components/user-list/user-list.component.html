@@ -1,1 +1,57 @@
-<p>user-list works!</p>
+<p-table appGridFilter [gridService]="userService$" [paginator]="true" [lazy]="true" sortMode="multiple" [first]="userService$.state.skip ?? 0" [rows]="userService$.state.top ?? 10" [totalRecords]="userService$.state.totalCount ?? 0" [showCurrentPageReport]="true" [rowsPerPageOptions]="[10, 25, 50]" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="min-width: 100px;" pColumnFilter class="heading">Action</th>
+            <th style="min-width: 180px;" pSortableColumn="FirstName" class="heading">First Name
+                <p-sortIcon field="FirstName"></p-sortIcon>
+                <p-columnFilter type="text" field="FirstName" display="menu" [showOperator]="false" [showAddButton]="false">
+                </p-columnFilter>
+            </th>
+            <th style="min-width: 180px;" pSortableColumn="LastName" class="heading">Surname
+                <p-sortIcon field="LastName"></p-sortIcon>
+                <p-columnFilter type="text" field="LastName" display="menu" [showOperator]="false" [showAddButton]="false">
+                </p-columnFilter>
+            </th>
+            <th style="min-width: 180px;" pSortableColumn="Gender" class="heading">Gender
+                <p-sortIcon field="Gender"></p-sortIcon>
+                <p-columnFilter type="text" field="Gender" display="menu" [showOperator]="false" [showAddButton]="false">
+                </p-columnFilter>
+            </th>
+            <th style="min-width: 180px;" pSortableColumn="MobileNumber" class="heading">Mobile Number
+                <p-sortIcon field="MobileNumber"></p-sortIcon>
+                <p-columnFilter type="text" field="MobileNumber" display="menu" [showOperator]="false" [showAddButton]="false">
+                </p-columnFilter>
+            </th>
+            <th style="min-width: 180px;" pSortableColumn="Email" class="heading">Email
+                <p-sortIcon field="Email"></p-sortIcon>
+                <p-columnFilter type="text" field="Email" display="menu" [showOperator]="false" [showAddButton]="false">
+                </p-columnFilter>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-user>
+        <tr>
+            <td>
+                <div class="d-flex align-items-center justify-content-start ">
+
+                    <div class="mx-2">
+                        <i class="fa fa-pencil text-primary fs-4 pointer" (click)="onEdit(user)"></i>
+                    </div>
+                    <div class="gap-3">
+                        <i class="fa fa-trash text-danger fs-4 pointer" (click)="onDelete(user)"></i>
+                    </div>
+                </div>
+            </td>
+            <td>{{ user.FirstName | titlecase }}</td>
+            <td>{{ user.LastName | titlecase }}</td>
+            <td>{{ user.Gender }}</td>
+            <td>{{ user.MobileNumber }}</td>
+            <td>{{ user.Email }}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="12" class="text-center">No user found.</td>
+        </tr>
+    </ng-template>
+</p-table>
