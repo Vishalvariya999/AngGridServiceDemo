@@ -7,6 +7,7 @@ import { AppConfigService } from './core/services/app-config.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { appInitProvide } from './app.initializer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderModule } from "./shared/loader/loader.module";
 
 @NgModule({
   declarations: [
@@ -16,8 +17,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
-  ],
+    BrowserAnimationsModule,
+    LoaderModule
+],
   providers: [
     provideClientHydration(),
     {

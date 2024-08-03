@@ -1,18 +1,36 @@
 .spinner {
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    z-index: 999999999;
-    width: 100% !important;
-    height: 100% !important;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  z-index: 999999999;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+}
+
+.spinner-border {
+  /*   for centering div */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*   spinner div css */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /*   background-color : red; */
+  border: 6px solid #ccc;
+  border-top-color: #3b3486;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  .spinner-border {
-    --cui-spinner-width: 3rem;
-    --cui-spinner-height: 3rem;
-    position: fixed !important;
-    top: 45% !important;
-    left: 50% !important;
+
+  100% {
+    transform: rotate(360deg);
   }
-  
+}

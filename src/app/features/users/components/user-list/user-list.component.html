@@ -42,11 +42,11 @@
                     </div>
                 </div>
             </td>
-            <td>{{ user.FirstName | titlecase }}</td>
-            <td>{{ user.LastName | titlecase }}</td>
-            <td>{{ user.Gender }}</td>
-            <td>{{ user.MobileNumber }}</td>
-            <td>{{ user.Email }}</td>
+            <td>{{ (user.FirstName | titlecase) || '-' }}</td>
+            <td>{{ (user.LastName | titlecase) || '-' }}</td>
+            <td>{{ user.Gender || '-'}}</td>
+            <td>{{ user.MobileNumber || '-' }}</td>
+            <td>{{ user.Email || '-' }}</td>
         </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage">

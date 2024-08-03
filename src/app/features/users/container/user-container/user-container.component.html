@@ -1,8 +1,11 @@
 <div class="mb-4 p-3 page-section">
     <div class="main-card-box">
+        <div class="col-md-4 col-6 pe-0">
+            <p class="heading-text mb-0">User Details</p>
+        </div>
         <div class="row align-items-center align-items-xl-center mb-2">
             <div class="col-md-4 col-6 pe-0">
-                <p class="heading-text mb-0">User Details</p>
+                <p class="mb-0">{{userService$.state.totalCount || 0 }} User Availabel</p>
             </div>
             <div class="search-add-button-box col-6 col-md-8 text-end">
                 <button class="btn add-button width-max-content">
